@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Farha Kousar | Digital Products & Mentorship</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin: 0;
+      color: #0077b6;
+    }
+    .card a {
+      color: #0077b6;
+      text-decoration: none;
+    }
+    .price {
+      font-weight: bold;
+      color: #28a745;
+    }
+    .category {
+      font-size: 0.9em;
+      color: #888;
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌟 Farha Kousar's Digital Resources</h1>
+    <h2>Curated Tools, Guides & Mentorships</h2>
+
+    <!-- MENTORSHIPS -->
+    <div class="card">
+      <h3>👩‍🏫 1:1 Mentorship - TopMate</h3>
+      <a href="https://topmate.io/farha_kousar" target="_blank">https://topmate.io/farha_kousar</a>
+    </div>
+    <div class="card">
+      <h3>🧠 Wadhwani Foundation (Saturdays only)</h3>
+      <a href="https://web.opportunity.wfglobal.org/en/mentor/75b550f8-34b2-4d49-98ab-919cd89b5cd8" target="_blank">
+        https://web.opportunity.wfglobal.org/en/mentor/75b550f8-34b2-4d49-98ab-919cd89b5cd8
+      </a>
+    </div>
+
+    <!-- LINKEDIN -->
+    <div class="card">
+      <h3>🔗 Connect with Me on LinkedIn</h3>
+      <a href="https://www.linkedin.com/in/farhakousar" target="_blank">linkedin.com/in/farhakousar</a>
+    </div>
+
+    <!-- DIGITAL PRODUCTS LIST -->
+    <h2>🛍️ Digital Products</h2>
+# Generate HTML card blocks dynamically from the DataFrame
+cards_html = ""
+for _, row in df.iterrows():
+    card = f"""
+    <div class="card">
+      <h3>{row['service_name']}</h3>
+      <a href="{row['service_link']}" target="_blank">{row['service_link']}</a>
+      <p class="price">Price: ₹{row['price']}</p>
+      <p class="category">Category: {row['category']}</p>
+    </div>
+    """
+    cards_html += card
+
+# Preview the generated HTML for product cards
+cards_html[:2000]  # limit preview to first 2000 characters to avoid overload
